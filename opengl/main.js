@@ -46,7 +46,10 @@ for (let i =0; i < positions.length; i++){
     positions[i]*=.5;
 }
 
-cube = new Renderable(positions,[],shaderProg);
+cube = new Renderable(
+    [1,0,0, 0,1,0, 0,0,0],
+    [1,0,0, 0,1,0, 0,0,1]
+,shaderProg);
 cube.draw(
     new Float32Array([1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1])
 )

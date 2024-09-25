@@ -17,13 +17,13 @@
     </script>
     <script id = "vertex-shader" type="glsl">
         attribute vec4 vertexPosition;
-        attribute vec4 vertexColor;
+        attribute vec3 vertexColor;
         uniform mat4 projection;
         varying vec4 shaderColor;
         void main() {
             gl_Position.w = 1.0;
             gl_Position = vertexPosition * projection;
-            shaderColor = vertexColor;
+            shaderColor = vec4(vertexColor.xyz,1);
         }
     </script>
 </head>

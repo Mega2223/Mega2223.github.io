@@ -45,15 +45,22 @@ class Renderable {
         this.color_vbo = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, this.vert_vbo)
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.vertices), gl.STATIC_DRAW);
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.color_vbo)
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.colors), gl.STATIC_DRAW);
     }
     setUniforms(){}
     draw(projMat){
-        gl.bindBuffer(gl.ARRAY_BUFFER, this.vert_vbo)
         gl.useProgram(this.shaderProg);
         gl.uniformMatrix4fv(this.proj_mat_loc,false,projMat);
         gl.enableVertexAttribArray(0);
+        gl.enableVertexAttribArray(1);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.color_vbo)
+        gl.vertexAttribPointer(1, 3, gl.FLOAT, false, 0, 0);
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.vert_vbo)
         gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
         gl.drawArrays(gl.TRIANGLES, 0, this.vertices.length/3);
+        gl.disableVertexAttribArray(1);
+        gl.disableVertexAttribArray(0);
     }
 }
