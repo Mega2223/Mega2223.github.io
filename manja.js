@@ -63,7 +63,7 @@ var positions = [
 
 gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 
-gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+gl.viewport(0, 0, canvas.width, canvas.height);
 gl.clearColor(.5,.5,.6,1);
 gl.useProgram(shaderPorg);
 
