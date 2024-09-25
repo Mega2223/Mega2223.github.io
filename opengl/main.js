@@ -62,7 +62,7 @@ let projectionMatrix = [
 
 let objects = [cube]
 
-document.addEventListener("mousemove",()=>{
+function render(){
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     for (let i = 0; i < objects.length; i++){
         objects[i].draw(projectionMatrix)
@@ -72,13 +72,15 @@ document.addEventListener("mousemove",()=>{
         let obj = new Renderable(positions,positions,shaderProg);
         obj.coords[0] = 10*(Math.random() - .5)
         obj.coords[1] = 10*(Math.random() - .5)
-        obj.coords[2] = -1
+        obj.coords[2] = -2
         console.log(obj.coords)
         objects.push(obj)
     }
-});
+}
 
-gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-cube.draw(
-    projectionMatrix
-)
+// document.addEventListener("mousemove",()=>{
+//     render()
+// });
+setInterval(function() {
+    render()
+}, 1000/60);
