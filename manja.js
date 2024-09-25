@@ -73,7 +73,7 @@ for (let i = 0; i < square.length; i+=3){
 }
 
 for (let i =0; i < positions.length; i++){
-    positions[i]*=.6;
+    positions[i]*=.5;
 }
 
 console.log(positions)
