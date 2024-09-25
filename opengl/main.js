@@ -53,14 +53,32 @@ cube = new Renderable(
     positions
 ,shaderProg);
 
-let ang = 0.0
+let projectionMatrix = [
+    .5,0,0,0,
+    0,.5,0,0,
+    0,0,.5,0,
+    0,0,.5,1
+];
+
+let objects = [cube]
+
 document.addEventListener("mousemove",()=>{
-    cube.draw(
-        generateRotationMatrix(ang,ang*0.76 + Math.sin(ang*.231),ang*0.31257)
-    )
-    ang += 0.034
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    for (let i = 0; i < objects.length; i++){
+        objects[i].draw(projectionMatrix)
+        objects[i].coords[2] += 0.1
+    }
+    if(Math.random() > .9){
+        let obj = new Renderable(positions,positions,shaderProg);
+        obj.coords[0] = 10*(Math.random() - .5)
+        obj.coords[1] = 10*(Math.random() - .5)
+        obj.coords[2] = -1
+        console.log(obj.coords)
+        objects.push(obj)
+    }
 });
 
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 cube.draw(
-    new Float32Array([1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1])
+    projectionMatrix
 )
