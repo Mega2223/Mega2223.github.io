@@ -9,6 +9,8 @@ if (!gl) {
 }
 
 gl.clearColor(.5,.5,.6,1);
+gl.enable(gl.DEPTH_TEST)
+
 let vertexShader = compileShader(gl, gl.VERTEX_SHADER, document.querySelector("#vertex-shader").text)
 let fragmentShader = compileShader(gl, gl.FRAGMENT_SHADER, document.querySelector("#fragment-shader").text)
 
@@ -47,14 +49,14 @@ for (let i =0; i < positions.length; i++){
 }
 
 cube = new Renderable(
-    [1,0,0, 0,1,0, 0,0,0],
-    [1,0,0, 0,1,0, 0,0,1]
+    positions,
+    positions
 ,shaderProg);
 
 let ang = 0.0
 document.addEventListener("mousemove",()=>{
     cube.draw(
-        generateRotationMatrix(ang,ang*0.76,ang*0.31257)
+        generateRotationMatrix(ang,ang*0.76 + Math.sin(ang*.231),ang*0.31257)
     )
     ang += 0.034
 });

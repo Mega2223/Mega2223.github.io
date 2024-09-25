@@ -59,7 +59,7 @@ class Renderable {
         gl.vertexAttribPointer(1, 3, gl.FLOAT, false, 0, 0);
         gl.bindBuffer(gl.ARRAY_BUFFER, this.vert_vbo)
         gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
-        gl.drawArrays(gl.TRIANGLES, 0, this.vertices.length/3);
+        gl.drawArrays(gl.LINES, 0, this.vertices.length/3);
         gl.disableVertexAttribArray(1);
         gl.disableVertexAttribArray(0);
     }
