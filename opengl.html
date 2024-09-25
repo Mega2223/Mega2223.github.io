@@ -20,6 +20,7 @@
         attribute vec3 vertexColor;
         uniform mat4 projection;
         varying vec4 shaderColor;
+
         void main() {
             gl_Position.w = 1.0;
             gl_Position = vertexPosition * projection;
