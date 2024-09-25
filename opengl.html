@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="manja.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Among Us</title>
+
+    <script id="vertex-shader" type="notjs">
+      attribute vec4 vertPosAttSpace;
+      void main() {
+          gl_Position = vertPosAttSpace;
+      }
+    </script>
+    <script id="fragment-shader" type="notjs">
+      precision mediump float;
+      void main() {
+          gl_FragColor = vec4(1,0,0,1);
+      }
+    </script>
+</head>
+
+<body>
+  <canvas id="context"></canvas>
+</body>
+
+</html>
