@@ -10,6 +10,9 @@ if (!gl) {
 
 gl.clearColor(.5,.5,.6,1);
 gl.enable(gl.DEPTH_TEST)
+gl.viewport(0,0,gl.canvas.width,gl.canvas.height)
+
+let aspectRatio = gl.canvas.width/gl.canvas.height;
 
 let vertexShader = compileShader(gl, gl.VERTEX_SHADER, document.querySelector("#vertex-shader").text)
 let fragmentShader = compileShader(gl, gl.FRAGMENT_SHADER, document.querySelector("#fragment-shader").text)
@@ -55,7 +58,7 @@ cube = new Renderable(
 
 let projectionMatrix = [
     .5,0,0,0,
-    0,.5,0,0,
+    0,.5*aspectRatio,0,0,
     0,0,.5,0,
     0,0,.5,1
 ];
@@ -67,6 +70,9 @@ function render(){
     for (let i = 0; i < objects.length; i++){
         objects[i].draw(projectionMatrix)
         objects[i].coords[2] += 0.1
+    }
+    if(objects.length > 100){
+        objects.shift()
     }
     if(Math.random() > .9){
         let obj = new Renderable(positions,positions,shaderProg);
@@ -83,4 +89,4 @@ function render(){
 // });
 setInterval(function() {
     render()
-}, 1000/60);
+}, 1000.0/60.0);
