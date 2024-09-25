@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="manja.js" defer></script>
-    <link rel="stylesheet" href="opengl.css">
+    <script src = "opengl/render.js" defer></script>
+    <script src = "opengl/vmath.js" defer></script>
+    <script src="opengl/main.js" defer></script>
+    <link rel="stylesheet" href="opengl/opengl.css">
     <meta charset="UTF-8">
-    <title>Among Us</title>
+    <title>Mundo :)</title>
 
-    <script id="vertex-shader" type="notjs">
-      attribute vec4 vertPosAttSpace;
-      uniform mat4 rotation;
-      void main() {
-          gl_Position = vertPosAttSpace * rotation;
-      }
+    <script id = "fragment-shader" type="glsl">
+        precision mediump float;
+        varying vec4 shaderColor;
+        void main() {
+            gl_FragColor = shaderColor;
+        }
     </script>
-    <script id="fragment-shader" type="notjs">
-      precision mediump float;
-      void main() {
-          gl_FragColor = vec4(1,0,0,1);
-      }
+    <script id = "vertex-shader" type="glsl">
+        attribute vec4 vertexPosition;
+        attribute vec4 vertexColor;
+        uniform mat4 projection;
+        varying vec4 shaderColor;
+        void main() {
+            gl_Position.w = 1.0;
+            gl_Position = vertexPosition * projection;
+            shaderColor = vertexColor;
+        }
     </script>
 </head>
 
