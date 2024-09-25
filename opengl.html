@@ -8,8 +8,9 @@
 
     <script id="vertex-shader" type="notjs">
       attribute vec4 vertPosAttSpace;
+      uniform mat4 rotation;
       void main() {
-          gl_Position = vertPosAttSpace;
+          gl_Position = vertPosAttSpace * rotation;
       }
     </script>
     <script id="fragment-shader" type="notjs">
@@ -21,7 +22,7 @@
 </head>
 
 <body>
-  <canvas id="context"></canvas>
+    <canvas id="context" width="630" height="630"></canvas>
 </body>
 
 </html>

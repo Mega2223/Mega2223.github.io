@@ -1,7 +1,4 @@
-#context{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    border: none;
-    padding: 0;
+canvas{
+    width: 630px;
+    height: 630px;
 }
