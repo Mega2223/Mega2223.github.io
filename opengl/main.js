@@ -50,6 +50,15 @@ cube = new Renderable(
     [1,0,0, 0,1,0, 0,0,0],
     [1,0,0, 0,1,0, 0,0,1]
 ,shaderProg);
+
+let ang = 0.0
+document.addEventListener("mousemove",()=>{
+    cube.draw(
+        generateRotationMatrix(ang,ang*0.76,ang*0.31257)
+    )
+    ang += 0.034
+});
+
 cube.draw(
     new Float32Array([1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,1])
 )
