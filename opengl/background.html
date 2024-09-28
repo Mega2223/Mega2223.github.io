@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = "util/render.js" defer></script>
-    <script src = "util/vmath.js" defer></script>
-    <script src="opengl/cubes.js" defer></script>
-    <link rel="stylesheet" href="opengl/opengl.css">
+    <script src = "../util/render.js" defer></script>
+    <script src = "../util/vmath.js" defer></script>
+    <script src="background.js" defer></script>
+    <link rel="stylesheet" href="opengl.css">
     <meta charset="UTF-8">
     <title>Cubo :)</title>
 
@@ -26,13 +26,13 @@
         void main() {
             gl_Position.w = 1.0;
             gl_Position = (location + vertexPosition) * projection;
-            shaderColor = vec4(vertexColor.xyz,1);
+            shaderColor = vec4(1,1,1,1);
         }
     </script>
 </head>
 
 <body>
-    <canvas id="context" width="850" height="850"></canvas>
+    <canvas id="context" width="1365" height="645"></canvas>
 </body>
 
 </html>
