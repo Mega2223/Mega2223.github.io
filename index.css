@@ -13,7 +13,11 @@ body{
     font-family: "Home video", system-ui;
     overflow: hidden;
     border: none;
-    font-size: 15px;
+    font-size: 13px;
+}
+
+body a {
+    color: mediumpurple;
 }
 
 .canvas{
@@ -25,7 +29,7 @@ body{
 
 .canvas h2
 {
-    font-size: 55px;
+    font-size: 45px;
     justify-content: center;
     display: flex;
     font-family: "Home video", system-ui;
@@ -33,7 +37,7 @@ body{
 
 .canvas h3
 {
-    font-size: 40px;
+    font-size: 35px;
     justify-content: center;
     display: flex;
     font-family: "Home video", system-ui;
