@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Public Pixel";
+    src: url("./fonts/public-pixel-font/PublicPixel.ttf");
+}
+@font-face {
+    font-family: "Home video";
+    src: url("./fonts/home-video-font/HomeVideoBold.ttf");
+}
+
 body{
     background-color: blue;
     color: white;
@@ -10,7 +19,7 @@ body{
 .canvas{
     display: compact;
     justify-content: center;
-    font-family: "Public Pixel";
+    font-family: "Public Pixel", math;
     text-align: center;
 }
 
@@ -31,8 +40,8 @@ body{
 }
 
 .canvas p{
-    margin-right: 25%;
-    margin-left: 25%;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 
 .background{

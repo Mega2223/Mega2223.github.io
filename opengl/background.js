@@ -74,7 +74,7 @@ let objects = [cube]
 let iteration = 0;
 function render(){
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-projectionMatrix = generateRotationMatrix(Math.exp(1)+iteration*0.0033,2+iteration*0.0031,1.7+iteration*0.0028)
+projectionMatrix = generateRotationMatrix(5.123+iteration*0.0033,2.13+iteration*0.0031,1.7+iteration*0.0028)
     for (let i = 0; i < objects.length; i++){
         objects[i].draw(projectionMatrix)
     }
