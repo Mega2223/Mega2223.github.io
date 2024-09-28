@@ -8,8 +8,14 @@ if (!gl) {
     console.log('seu navegador é bom')
 }
 
+canvas.height = 600
+canvas.width = 600
+
 gl.clearColor(0,0,0,0);
-gl.enable(gl.DEPTH_TEST)
+gl.enable(gl.DEPTH_TEST);
+gl.enable(gl.BLEND)
+gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+
 gl.viewport(0,0,gl.canvas.width,gl.canvas.height)
 
 let aspectRatio = gl.canvas.width/gl.canvas.height;
@@ -58,30 +64,24 @@ cube = new Renderable(
 
 let projectionMatrix = [
     .5,0,0,0,
-    0,.5*aspectRatio,0,0,
+    0,.5/**aspectRatio*/,0,0,
     0,0,.5,0,
     0,0,.5,1
 ];
 
 let objects = [cube]
 
+let iteration = 0;
 function render(){
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+projectionMatrix = generateRotationMatrix(Math.exp(1)+iteration*0.0033,2+iteration*0.0031,1.7+iteration*0.0028)
     for (let i = 0; i < objects.length; i++){
         objects[i].draw(projectionMatrix)
-        objects[i].coords[2] += 0.1
     }
     if(objects.length > 100){
         objects.shift()
     }
-    if(Math.random() > .9){
-        let obj = new Renderable(positions,positions,shaderProg);
-        obj.coords[0] = 10*(Math.random() - .5)
-        obj.coords[1] = 10*(Math.random() - .5)
-        obj.coords[2] = -2
-        console.log(obj.coords)
-        objects.push(obj)
-    }
+    iteration++;
 }
 
 // document.addEventListener("mousemove",()=>{

@@ -4,15 +4,17 @@
     <script src = "../util/render.js" defer></script>
     <script src = "../util/vmath.js" defer></script>
     <script src="background.js" defer></script>
-    <link rel="stylesheet" href="opengl.css">
     <meta charset="UTF-8">
     <title>Cubo :)</title>
 
     <script id = "fragment-shader" type="glsl">
         precision mediump float;
+
         varying vec4 shaderColor;
+        varying vec4 fragmentPos;
         void main() {
             gl_FragColor = shaderColor;
+            gl_FragColor.a -= 0.01 * fragmentPos.z;
         }
     </script>
     <script id = "vertex-shader" type="glsl">
@@ -22,17 +24,25 @@
         uniform mat4 projection;
         uniform vec4 location;
         varying vec4 shaderColor;
+        varying vec4 fragmentPos;
 
         void main() {
             gl_Position.w = 1.0;
             gl_Position = (location + vertexPosition) * projection;
             shaderColor = vec4(1,1,1,1);
+            fragmentPos = location + vertexPosition;
         }
     </script>
 </head>
 
-<body>
-    <canvas id="context" width="1365" height="645"></canvas>
+<body style="display: flex; justify-content: center">
+    <canvas id="context" style= "
+justify-content: center;
+align-content: center;
+display: flex;
+vertical-align: middle;
+"
+    ></canvas>
 </body>
 
 </html>
