@@ -7,6 +7,15 @@
     src: url("./fonts/home-video-font/HomeVideoBold.ttf");
 }
 
+@keyframes fontIncrease {
+    from{
+        font-size: 13px;
+    }
+    to{
+        font-size: 15px;
+    }
+}
+
 body{
     background-color: blue;
     color: white;
@@ -18,6 +27,10 @@ body{
 
 body a {
     color: mediumpurple;
+}
+
+body a:hover{
+    animation: fontIncrease .5s forwards;
 }
 
 .canvas{
@@ -57,4 +70,12 @@ body a {
     max-width: 100%;
     height: 100%;
     z-index: -200;
+}
+
+#neon:hover{
+    color: green;
+}
+
+#github:hover{
+    color: grey;
 }
