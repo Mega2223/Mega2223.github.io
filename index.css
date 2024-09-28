@@ -4,30 +4,40 @@ body{
     font-family: "Home video", system-ui;
     overflow: hidden;
     border: none;
-}
-
-.canvas {
     font-size: 15px;
-    /*font-family: "OCR A Std", monospace;*/
-    display: compact;
 }
 
-#title{
-    font-size: 50px;
-    justify-content: center;
-    display: flex;
-    font-family: "Home video", system-ui;
-}
-
-#content{
+.canvas{
     display: compact;
     justify-content: center;
     font-family: "Public Pixel";
     text-align: center;
 }
 
+.canvas h2
+{
+    font-size: 55px;
+    justify-content: center;
+    display: flex;
+    font-family: "Home video", system-ui;
+}
+
+.canvas h3
+{
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+    font-family: "Home video", system-ui;
+}
+
+.canvas p{
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
 .background{
     position: absolute;
+    margin: 0;
     border: none;
     left: 0; top: 0;
     width: 100%;
