@@ -8,12 +8,21 @@
 }
 
 @keyframes fontIncrease {
-    from{
-        font-size: 13px;
-    }
-    to{
-        font-size: 15px;
-    }
+    from{ font-size: 13px; }
+    to{ font-size: 16px; }
+}
+
+@keyframes fadein {
+    from{opacity: 0}
+    20%{opacity: 0}
+    to{opacity: 100}
+}
+
+@keyframes blink {
+    from{opacity: 0}
+    25%{opacity: 0}
+    25.001%{opacity: 100}
+    to{opacity: 100}
 }
 
 body{
@@ -27,6 +36,11 @@ body{
 
 body a {
     color: mediumpurple;
+    animation: fadein 5s;
+}
+
+body p{
+    animation: fadein 5s;
 }
 
 body a:hover{
@@ -46,6 +60,7 @@ body a:hover{
     justify-content: center;
     display: flex;
     font-family: "Home video", system-ui;
+    animation: blink 2s infinite;
 }
 
 .canvas h3
@@ -54,11 +69,18 @@ body a:hover{
     justify-content: center;
     display: flex;
     font-family: "Home video", system-ui;
+    animation: blink 2s infinite;
 }
 
 .canvas p{
     margin-right: 20%;
     margin-left: 20%;
+}
+
+.projs{
+    justify-content: left;
+    display: grid;
+    /*position: absolute;*/
 }
 
 .background{
@@ -70,6 +92,7 @@ body a:hover{
     max-width: 100%;
     height: 100%;
     z-index: -200;
+    animation: fadein 10s;
 }
 
 #neon:hover{

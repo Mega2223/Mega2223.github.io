@@ -2,7 +2,7 @@ const canvas = document.querySelector("#context");
 const gl = canvas.getContext("webgl");
 
 if (!gl) {
-    alert('seu navegador é ruim')
+    alert('Seu navegador não roda OpenGL')
     window.open('https://youtu.be/dQw4w9WgXcQ?si=Y7L0RtQy0-JVGBm9&autoplay=1','_self')
 } else {
     console.log('seu navegador é bom')
