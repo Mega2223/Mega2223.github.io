@@ -60,6 +60,15 @@ body a:hover{
     animation: fontIncrease .5s forwards;
 }
 
+#projects-title{
+    animation: blink 2s infinite;
+}
+
+.big-text{
+    font-size: 35px;
+    font-family: Home Video, system-ui;
+}
+
 .canvas{
     display: compact;
     justify-content: center;
@@ -72,7 +81,6 @@ body a:hover{
     justify-content: center;
     display: flex;
     font-family: "Home Video Bold", system-ui;
-    animation: blink 3s infinite;
     line-height: .4;
 }
 
@@ -99,14 +107,16 @@ body a:hover{
 
 .projs h2 {
     font-size: 45px;
-    line-height: 1.5;
+    line-height: 0;
 }
 
 .background{
     position: absolute;
     margin: 0;
     border: none;
-    left: 25%; top: 25%;
+    left: 25%;
+    top: 0%;
+    /*top: 25%;*/
     width: 50%;
     max-width: 100%;
     /*height: 100%;*/
