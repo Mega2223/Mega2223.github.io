@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = "../util/render.js" defer></script>
-    <script src = "../util/vmath.js" defer></script>
-    <script src="background.js" defer></script>
     <meta charset="UTF-8">
     <title>Cubo :)</title>
-
+    <script src = "../util/render.js" defer></script>
+    <script src = "../util/vmath.js" defer></script>
+    <script src="./background.js" defer></script>
     <script id = "fragment-shader" type="glsl">
         precision mediump float;
 
@@ -40,8 +39,8 @@
 justify-content: center;
 position: absolute;
 top: 50%;
-/*transform: translate(0, 50%);*/
-/*background-color: black;*/
+background-color: blue;
+z-index: -100;
 "
     ></canvas>
 </body>

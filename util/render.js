@@ -28,9 +28,9 @@ function compileProgram(gl, vertexShader, fragmentShader) {
 class Renderable {
     vertices; colors;
     coords = [0,0,0,0]
-    vert_vbo = -1; color_vbo = -1;
-    vert_loc = -1; colors_loc = -1;
-    proj_mat_loc = -1; coord_vec_loc;
+    vert_vbo; color_vbo;
+    vert_loc; colors_loc;
+    proj_mat_loc; coord_vec_loc; aspect_loc;
     shaderProg;
     constructor(vertices, colors, shaderProgram) {
         this.vertices = vertices;
@@ -43,6 +43,7 @@ class Renderable {
         this.colors_loc = gl.getAttribLocation(this.shaderProg,"vertexColor");
         this.proj_mat_loc = gl.getUniformLocation(this.shaderProg,"projection")
         this.coord_vec_loc = gl.getUniformLocation(this.shaderProg,"location");
+        this.aspect_loc = gl.getUniformLocation(this.shaderProg,"aspectRatio");
         this.vert_vbo = gl.createBuffer();
         this.color_vbo = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, this.vert_vbo)
@@ -50,10 +51,11 @@ class Renderable {
         gl.bindBuffer(gl.ARRAY_BUFFER, this.color_vbo)
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(this.colors), gl.STATIC_DRAW);
     }
-    draw(projMat){
+    draw(projMat, aspect = 1){
         gl.useProgram(this.shaderProg);
         gl.uniform4f(this.coord_vec_loc,this.coords[0],this.coords[1],this.coords[2],this.coords[3])
         gl.uniformMatrix4fv(this.proj_mat_loc,false,projMat);
+        gl.uniform1f(this.aspect_loc,1)
         gl.enableVertexAttribArray(0);
         gl.enableVertexAttribArray(1);
         gl.bindBuffer(gl.ARRAY_BUFFER, this.color_vbo)

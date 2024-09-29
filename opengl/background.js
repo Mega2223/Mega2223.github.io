@@ -8,8 +8,8 @@ if (!gl) {
     console.log('seu navegador é bom')
 }
 
-canvas.height = 600
-canvas.width = 600
+canvas.height = 800
+canvas.width = 800
 
 gl.clearColor(0,0,0,0);
 gl.enable(gl.DEPTH_TEST);
@@ -64,17 +64,21 @@ cube = new Renderable(
 
 let projectionMatrix = [
     .5,0,0,0,
-    0,.5/**aspectRatio*/,0,0,
+    0,.5/aspectRatio,0,0,
     0,0,.5,0,
     0,0,.5,1
 ];
 
 let objects = [cube]
-
 let iteration = 0;
+const mouse = [0,0]
+
 function render(){
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-projectionMatrix = generateRotationMatrix(5.123+iteration*0.0033,2.13+iteration*0.0031,1.7+iteration*0.0028)
+projectionMatrix = generateRotationMatrix(
+    iteration*0.001+mouse[0]*0.0025,
+    iteration*0.00225+mouse[1]*0.0025,
+    iteration*0.0035 )
     for (let i = 0; i < objects.length; i++){
         objects[i].draw(projectionMatrix)
     }
@@ -83,10 +87,9 @@ projectionMatrix = generateRotationMatrix(5.123+iteration*0.0033,2.13+iteration*
     }
     iteration++;
 }
-
-// document.addEventListener("mousemove",()=>{
-//     render()
-// });
+document.addEventListener("mousemove",(ev)=>{
+    mouse[0] = ev.x; mouse[1] = ev.y;
+});
 setInterval(function() {
     render()
 }, 1000.0/60.0);

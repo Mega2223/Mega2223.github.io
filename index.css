@@ -3,44 +3,57 @@
     src: url("./fonts/public-pixel-font/PublicPixel.ttf");
 }
 @font-face {
-    font-family: "Home video";
+    font-family: "Home Video Bold";
     src: url("./fonts/home-video-font/HomeVideoBold.ttf");
+}
+@font-face {
+    font-family: "Home Video";
+    src: url("./fonts/home-video-font/HomeVideo.ttf");
 }
 
 @keyframes fontIncrease {
-    from{ font-size: 13px; }
+
     to{ font-size: 16px; }
+}
+@keyframes fontDecrease {
+    to{
+        font-size: 13px;
+    }
 }
 
 @keyframes fadein {
     from{opacity: 0}
     20%{opacity: 0}
-    to{opacity: 100}
+    to{opacity: 100; animation: fontDecrease;}
 }
 
 @keyframes blink {
     from{opacity: 0}
-    25%{opacity: 0}
+    25.0%{opacity: 0}
     25.001%{opacity: 100}
     to{opacity: 100}
+}
+
+@keyframes trans {
+
 }
 
 body{
     background-color: blue;
     color: white;
-    font-family: "Home video", system-ui;
-    overflow: hidden;
+    font-family: "Home Video Bold", system-ui;
+    /*overflow: hidden;*/
     border: none;
     font-size: 13px;
+    animation: fadein 3s;
 }
 
 body a {
     color: mediumpurple;
-    animation: fadein 5s;
+    animation: fontDecrease;
 }
 
 body p{
-    animation: fadein 5s;
 }
 
 body a:hover{
@@ -54,45 +67,51 @@ body a:hover{
     text-align: center;
 }
 
-.canvas h2
-{
-    font-size: 45px;
+.canvas h2 {
+    font-size: 55px;
     justify-content: center;
     display: flex;
-    font-family: "Home video", system-ui;
-    animation: blink 2s infinite;
+    font-family: "Home Video Bold", system-ui;
+    animation: blink 3s infinite;
+    line-height: .4;
 }
 
-.canvas h3
-{
+.canvas h3 {
     font-size: 35px;
     justify-content: center;
     display: flex;
-    font-family: "Home video", system-ui;
-    animation: blink 2s infinite;
+    font-family: "Home Video Bold", system-ui;
+    animation: trans;
 }
 
-.canvas p{
+.canvas h4 {
+    font-size: 35px;
+    justify-content: center;
+    display: flex;
+    font-family: "Home Video", system-ui;
+    animation: trans;
+}
+
+.canvas p {
     margin-right: 20%;
     margin-left: 20%;
 }
 
-.projs{
-    justify-content: left;
-    display: grid;
-    /*position: absolute;*/
+.projs h2 {
+    font-size: 45px;
+    line-height: 1.5;
 }
 
 .background{
     position: absolute;
     margin: 0;
     border: none;
-    left: 0; top: 0;
-    width: 100%;
+    left: 25%; top: 25%;
+    width: 50%;
     max-width: 100%;
-    height: 100%;
+    /*height: 100%;*/
     z-index: -200;
-    animation: fadein 10s;
+    animation: fadein 7s;
 }
 
 #neon:hover{

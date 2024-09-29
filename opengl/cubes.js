@@ -84,9 +84,6 @@ function render(){
     }
 }
 
-// document.addEventListener("mousemove",()=>{
-//     render()
-// });
 setInterval(function() {
     render()
 }, 1000.0/60.0);
