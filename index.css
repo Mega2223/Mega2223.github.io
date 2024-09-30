@@ -136,6 +136,10 @@ body a:hover{
     image-rendering: pixelated;
 }
 
+.neonfc a:hover{
+    color: greenyellow;
+}
+
 #readify-showcase-artists{
     position: absolute;
     top: auto;
