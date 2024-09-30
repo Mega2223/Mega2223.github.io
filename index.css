@@ -162,7 +162,8 @@ body a:hover{
     image-rendering: optimizeSpeed;
 }
 #robots-showcase{
-    transform: scale(70%) translateY(-20%);
+    /*transform: scale(70%) translateY(-20%);*/
+    max-width: 40%;
     z-index: -40;
 }
 
