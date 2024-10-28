@@ -42,7 +42,7 @@
   <div class = "canvas">
     <h2>Ola o/</h2>
     <p>Bem vindo à minha página :)</p>
-    <p></p>
+<!--    <p></p>-->
 
     <h3>Sobre mim</h3>
     <p>Meu nome é Júlio, sou programador e atualmente sou estudante
@@ -54,57 +54,15 @@
     a grande maioria dos projetos que trabalhei são open-source então
     eles estão aqui no meu <a id="github" href="https://github.com/mega2223/">GitHub</a>.</p>
     <p>A língua que eu mais uso é Java, mas eu também
-      tenho proficiência em C++, Python, GLSL, Lua e Squirrel.<p/>
+      tenho proficiência em C++, Python, GLSL, Lua e Squirrel.</p>
     <p>Atualmente estou me aprofundando em Rust, C# e desenvolvimento web (JS, HTML, CSS).</p>
-
-    <div class="projects">
-      <div class="nada" style="min-height: 5px"></div>
-      <h2 id="projects-title">↓ Meus projetos ↓</h2>
-      <div class="nada" style="min-height: 100px"></div>
-      <div class = "aguaengine">
-        <p class = "big-text" >AguaEngine3D</p>
-        <p style="min-height: 100px">Desde janeiro de 2023 eu venho trabalhando em uma engine 3d
-          baseada em Java e OpenGL.
-         A AguaEngine3D é o meu maior projeto solo, ela é cheia de utilidades para
-          a programação 3D, eu sempre tenho algo de novo para acrescentar.</p>
-        <div>
-          <img height=325 width=295
-                  src="https://github.com/Mega2223/Mega2223.github.io/blob/main/media/WorldGenDemo.gif?raw=true">
-          <img height=325 width=295
-               src="https://github.com/Mega2223/Mega2223.github.io/blob/main/media/Screenshot_1860.png?raw=true">
-          <img height=325 width=295
-                  src="https://github.com/Mega2223/Mega2223.github.io/blob/main/media/ShadowDemo.gif?raw=true">
-          <img height=325 width=295
-                  src="https://github.com/Mega2223/Mega2223.github.io/blob/main/media/FloorDemo.gif?raw=true">
-        </div>
-        <p>Leia mais sobre a engine <a id="engine" href="https://github.com/Mega2223/AguaEngine3D/">aqui.</a>.</p>
-      </div>
-      <div class="nada" style="min-height: 100px"></div>
-      <div class = "readify">
-        <p class = "big-text" >Readify</p>
-        <p>Aplicação que fiz para quantificar minha obsessão por música,
-         o Readify é uma aplicação de desktop baseada em Swing que quantifica os
-          seus hábitos musicais com base nos dados do Spotify. </p>
-        <div class = "readify-showcase">
-<!--          <img src="media/readify/Screenshot_1866.png" alt="">-->
-          <img src="media/readify/Screenshot_1870.png" id="readify-showcase-graph" alt="">
-          <img src="media/readify/Screenshot_1867.png" id="readify-showcase-artists" alt="">
-<!--          <img src="media/readify/Screenshot_1868.png" id="readify-showcase-selection" alt="">-->
-<!--          <img src="media/readify/Screenshot_1869.png">-->
-        </div>
-      </div>
-      <div class="nada" style="min-height: 100px"></div>
-      <div class = "neonfc">
-        <p class = "big-text" >NeonFC</p>
-        <p>Dentro da Project Neon eu faço parte da divisão de software da tribo de autônomos multi-robóticos.
-        Eu trabalho majoritariamente na divisão do VSSS, que é uma modalidade de futebol autônomo de robôs de pequeno porte.
-        </p>
-        <img src="media/Robos.png" id="robots-showcase" alt="">
-        <p>
-          Como a filosofia da Neon é o open source,
-          todo o nosso projeto está disponível no <a href="https://github.com/project-neon/NeonFC">Github da equipe.</a>
-        </p>
-      </div>
+  </div>
+  <div id="pages">
+    <div style="min-width: 40%">
+      <p onclick="window.location.replace('./projetos.html')">PROJETOS</p>
+    </div>
+    <div style="min-width: 0px">
+      <p>PESQUISA</p>
     </div>
   </div>
   <canvas id="context" class="background">
