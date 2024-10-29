@@ -44,7 +44,7 @@ body{
     font-family: "Home Video Bold", system-ui;
     /*overflow: hidden;*/
     border: none;
-    font-size: 2.1vh;
+    font-size: 2vmin;
     animation: fadein 3s;
 }
 
@@ -77,7 +77,7 @@ body a:hover{
 }
 
 .canvas h2 {
-    font-size: 9vh;
+    font-size: 9vmin;
     justify-content: center;
     display: flex;
     font-family: "Home Video Bold", system-ui;
@@ -85,7 +85,7 @@ body a:hover{
 }
 
 .canvas h3 {
-    font-size: 6.5vh;
+    font-size: 6.5vmin;
     justify-content: center;
     display: flex;
     font-family: "Home Video Bold", system-ui;
@@ -101,8 +101,8 @@ body a:hover{
 }
 
 .canvas p {
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: max(20%,15vmin);
+    margin-left: max(20%,15vmin);
 }
 
 .projs h2 {
@@ -114,11 +114,13 @@ body a:hover{
     position: absolute;
     margin: 0;
     border: none;
-    left: 25%;
-    top: 1.0dvi;
-    /*top: 25%;*/
-    width: 46%;
-    max-width: 100%;
+    /*align-content: center;*/
+    /*left: min(12.5vw,50vh);*/
+    left: 10vw;
+    top: -10vw;
+    width: 80vw;
+    /*width: min(75vw,100vh);*/
+    /*max-width: 100%;*/
     /*height: 100%;*/
     z-index: -200;
     animation: fadein 7s;
@@ -147,7 +149,7 @@ body a:hover{
 #pages{
     justify-content: center;
     display: flex;
-    font-size: 6vh;
+    font-size: 6vmin;
 }
 
 #readify-showcase-artists{
