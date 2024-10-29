@@ -42,9 +42,9 @@ body{
     background-color: blue;
     color: white;
     font-family: "Home Video Bold", system-ui;
-    /*overflow: hidden;*/
+    overflow: hidden;
     border: none;
-    font-size: 13px;
+    font-size: 1vw;
     animation: fadein 3s;
 }
 

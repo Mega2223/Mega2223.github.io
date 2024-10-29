@@ -26,7 +26,7 @@
         void main() {
             gl_Position.w = 1.0;
             gl_Position = (location + vertexPosition) * projection;
-            shaderColor = vec4(vertexColor.xyz,1);
+            shaderColor = vec4(vertexColor.xyz,location.z);
         }
     </script>
 </head>
