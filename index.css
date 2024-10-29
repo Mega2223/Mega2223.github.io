@@ -110,6 +110,23 @@ body a:hover{
     line-height: 0;
 }
 
+/*.background{*/
+/*    position: absolute;*/
+/*    margin: 0;*/
+/*    border: none;*/
+/*    !*align-content: center;*!*/
+/*    !*left: min(12.5vw,50vh);*!*/
+/*    left: 12.5vw;*/
+/*    top: 0;*/
+/*    width: 75vw;*/
+/*    !*width: min(75vw,100vh);*!*/
+/*    !*max-width: 100%;*!*/
+/*    !*height: 100%;*!*/
+/*    z-index: -200;*/
+/*    animation: fadein 7s;*/
+/*    image-rendering: crisp-edges;*/
+/*}*/
+
 .background{
     position: absolute;
     margin: 0;
