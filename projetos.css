@@ -18,13 +18,21 @@
 }
 
 body{
-    font-family: Consolas, ui-monospace;
     background-color: black;
     color: white;
-    font-size: 2vmin;
-    animation: fadein 13s;
+    font-size: 16px;
+    font-family: "Comic Sans MS", sans-serif;
+    animation: fadein 2s;
+}
+
+
+.upper{
+    justify-content: center;
+    display: flex;
 }
 
 .title{
-    font-size: 80px;
+    font-size: 60px;
+    font-family: Home Video, ui-monospace;
+
 }
