@@ -11,14 +11,20 @@
     src: url("./fonts/home-video-font/HomeVideo.ttf");
 }
 
+@keyframes fadein {
+    from{opacity: 0}
+    20%{opacity: 0}
+    to{opacity: 100; animation: fontDecrease;}
+}
+
 body{
     font-family: Consolas, ui-monospace;
     background-color: black;
     color: white;
     font-size: 2vmin;
-    animation: fadein 3s;
+    animation: fadein 13s;
 }
 
 .title{
-
+    font-size: 80px;
 }
