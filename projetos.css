@@ -12,5 +12,13 @@
 }
 
 body{
+    font-family: Consolas, ui-monospace;
+    background-color: black;
+    color: white;
+    font-size: 2vmin;
+    animation: fadein 3s;
+}
+
+.title{
 
 }
