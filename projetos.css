@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Public Pixel";
+    src: url("./fonts/public-pixel-font/PublicPixel.ttf");
+}
+@font-face {
+    font-family: "Home Video Bold";
+    src: url("./fonts/home-video-font/HomeVideoBold.ttf");
+}
+@font-face {
+    font-family: "Home Video";
+    src: url("./fonts/home-video-font/HomeVideo.ttf");
+}
+
+body{
+
+}

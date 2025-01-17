@@ -12,13 +12,10 @@
 }
 
 @keyframes fontIncrease {
-
     to{ font-size: 16px; }
 }
 @keyframes fontDecrease {
-    to{
-        font-size: 13px;
-    }
+    to{ font-size: 13px;}
 }
 
 @keyframes fadein {
@@ -34,19 +31,28 @@
     to{opacity: 100}
 }
 
-@keyframes trans {
-
+@keyframes page-fadeout {
+    from{}
+    65%{
+        background-color: black;
+        opacity: 100%;
+    }
+    to{
+        opacity: 0;
+        background-color: black;
+    }
 }
 
 body{
     background-color: blue;
     color: white;
     font-family: "Home Video Bold", system-ui;
-    /*overflow: hidden;*/
+    overflow: hidden;
     border: none;
     font-size: 2vmin;
     animation: fadein 3s;
 }
+
 
 body a {
     color: mediumpurple;
@@ -140,7 +146,7 @@ body a:hover{
     /*max-width: 100%;*/
     /*height: 100%;*/
     z-index: -200;
-    animation: fadein 7s;
+    animation: fadein 7s ;
     image-rendering: crisp-edges;
 }
 
@@ -157,6 +163,12 @@ body a:hover{
 
 .neonfc a:hover{
     color: greenyellow;
+}
+
+.redirect {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #pages p{
@@ -208,3 +220,4 @@ body a:hover{
 #engine:hover{
     color: lightblue;
 }
+
