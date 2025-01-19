@@ -14,6 +14,29 @@
     font-family: "Fairfax";
     src: url("./fonts/fairfax-font/Fairfax-MJ0J.ttf");
 }
+@font-face {
+    font-family: "Modenine";
+    src: url("./fonts/modenine-font/Modenine-2OPd.ttf");
+}
+@font-face {
+    font-family: "Modeseven";
+    src: url("./fonts/modeseven-font/Modeseven-L3n5.ttf");
+}
+
+@font-face {
+    font-family: "WhiteRabbit";
+    src: url("./fonts/white-rabbit-font/WhiteRabbit-47pD.ttf");
+}
+
+@font-face {
+    font-family: "Vcr Ocd Demo";
+    src: url("./fonts/vcr-ocd-demo/VCR_OSD_MONO_1.001.ttf");
+}
+
+@font-face {
+    font-family: "Perfect Dos";
+    src: url("./fonts/perfect-dos-font/Perfect DOS VGA 437 Win.ttf");
+}
 
 @keyframes fadein {
     from{opacity: 0}
@@ -22,40 +45,82 @@
 }
 
 body{
-    background-color: black;
+    background-color: #050505;
     color: white;
-    font-size: 1.5vmax;
-    font-family: "Fairfax", sans-serif;
+    font-size: 1vmax;
+    font-family: "Perfect Dos", "Comic Sans MS", sans-serif;
     animation: fadein 2s;
     border-width: 0;
     line-height: 100%;
+    text-align: center;
 }
 
 p{
-    color: mediumseagreen;
+    /*color: mediumseagreen;*/
+    /*margin-bottom: 50%;*/
 }
 
 img{
-    height: 50%;
+    height: 40vh;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vw;
 }
 
 .title2{
-    font-size: 3vmax;
+    font-size: 3vw;
+    margin-top: 3vw;
 }
 
 .title{
-    font-size: 5vmax;
+    font-size: 5vw;
     font-family: Home Video, ui-monospace;
     line-height: 0;
-
 }
 
 .subdiv{
     justify-content: center;
     display: flex;
-    height: 48vmax;
-    width: 48vmax;
-    border: 2px dotted red;
+    height: 40vw;
+    width: 49vw;
+    /*border: 30vh solid red;*/
+    /*border: 3px solid white;*/
+    margin: 0 0 0 0;
+}
+
+.subdiv p{
+    margin: 1vw 3vw 1vw 3vw;
+}
+
+.display-outer{
+    display: inline-flex;
+
+    align-content: center;
+    border: lightgray 2px solid;
+    width: 35vw;
+    height: 35vw;
+}
+
+.display{
+    display: inline-grid;
+    align-content: center;
+    text-align: center;
+    border: lightgray 2px solid;
+    margin: 2px 2px 2px 2px;
+    /*width: 39vw;*/
+    /*height: 39vw;*/
+}
+
+.redirect{
+    color: rebeccapurple;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.redirect:hover{
+    color: purple;
 }
 
 #table{
@@ -63,14 +128,22 @@ img{
 }
 
 #upperleft{
+
     grid-row-start: 1;
     grid-column-start: 1;
 }
 
+#upperleft .title2{
+    color: darkcyan;
+}
 
 #upperright{
     grid-row-start: 1;
     grid-column-start: 2;
+}
+
+#upperright .title2{
+    color: limegreen;
 }
 
 
