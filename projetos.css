@@ -31,6 +31,14 @@ body{
     line-height: 100%;
 }
 
+p{
+    color: mediumseagreen;
+}
+
+img{
+    height: 50%;
+}
+
 .title2{
     font-size: 3vmax;
 }
@@ -42,13 +50,9 @@ body{
 
 }
 
-.superdiv{
-
-}
-
 .subdiv{
-    /*justify-content: center;*/
-    /*display: flex;*/
+    justify-content: center;
+    display: flex;
     height: 48vmax;
     width: 48vmax;
     border: 2px dotted red;
@@ -65,14 +69,14 @@ body{
 
 
 #upperright{
-    grid-row-start: 2;
-    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-start: 2;
 }
 
 
 #lowerleft{
-    grid-row-start: 1;
-    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-column-start: 1;
 }
 
 

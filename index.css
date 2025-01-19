@@ -169,6 +169,10 @@ body a:hover{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    min-width: 33vw;
+
+    display: flex;
+    justify-content: center;
 }
 
 #pages p{
@@ -208,6 +212,9 @@ body a:hover{
     z-index: -40;
 }
 
+#links{
+    display: grid;
+}
 
 #neon:hover{
     color: green;

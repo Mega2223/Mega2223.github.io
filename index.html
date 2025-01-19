@@ -61,24 +61,21 @@
 Youtube, Tumblr, Bsky, Insta talvez etc.
 Also esse ngc tá todo quebrado, vê se arruma de centralizar
 direito sem precisar reinventar a roda (impossible)-->
-    <div style="min-width: 40%" class = "redirect">
-      <p onclick="
-      //
-      // document.body.style.setProperty('background-color','black')
-      document.body.style.animation = 'page-fadeout 4s forwards'
-      setTimeout(
-              function (){
-                window.location.replace('./projetos.html')
-              },4000
-      )
 
+    <div id = "links">
+      <div style="grid-column-start: 1; grid-row-start: 1" class = "redirect">
+        <p onclick="
+      document.body.style.animation = 'page-fadeout 4s forwards'
+      setTimeout(function (){ window.location.replace('./projetos.html') },4000)
 ">PROJETOS</p>
-    </div>
-    <div style="min-width: 30%" class = "redirect">
-      <p onclick="window.location.replace('https://github.com/Mega2223')">GITHUB</p>
-    </div>
-    <div style="min-width: 10%" class = "redirect">
-      <p>PESQUISA</p>
+      </div>
+      <div style=" grid-column-start: 2; grid-row-start: 1" class = "redirect">
+        <p onclick="window.location.replace('https://github.com/Mega2223')">GITHUB</p>
+      </div>
+      <div style="grid-column-start: 3; grid-row-start: 1;" class = "redirect">
+        <p>PESQUISA</p>
+      </div>
+<!--      Projetos, GitHub, Pesquisa, Redes Sociais, Blog, talvez yt-->
 <!--      quando eu publicar meu artigo ele vai estar aqui :)-->
     </div>
   </div>
