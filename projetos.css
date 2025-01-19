@@ -10,6 +10,10 @@
     font-family: "Home Video";
     src: url("./fonts/home-video-font/HomeVideo.ttf");
 }
+@font-face {
+    font-family: "Fairfax";
+    src: url("./fonts/fairfax-font/Fairfax-MJ0J.ttf");
+}
 
 @keyframes fadein {
     from{opacity: 0}
@@ -20,19 +24,59 @@
 body{
     background-color: black;
     color: white;
-    font-size: 16px;
-    font-family: "Comic Sans MS", sans-serif;
+    font-size: 1.5vmax;
+    font-family: "Fairfax", sans-serif;
     animation: fadein 2s;
+    border-width: 0;
+    line-height: 100%;
 }
 
-
-.upper{
-    justify-content: center;
-    display: flex;
+.title2{
+    font-size: 3vmax;
 }
 
 .title{
-    font-size: 60px;
+    font-size: 5vmax;
     font-family: Home Video, ui-monospace;
+    line-height: 0;
 
+}
+
+.superdiv{
+
+}
+
+.subdiv{
+    /*justify-content: center;*/
+    /*display: flex;*/
+    height: 48vmax;
+    width: 48vmax;
+    border: 2px dotted red;
+}
+
+#table{
+    display: grid;
+}
+
+#upperleft{
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+
+
+#upperright{
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+
+#lowerleft{
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+
+#lowerright{
+    grid-row-start: 2;
+    grid-column-start: 2;
 }

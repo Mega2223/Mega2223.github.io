@@ -12,7 +12,7 @@
 }
 
 @keyframes fontIncrease {
-    to{ font-size: 16px; }
+    to{ font-size: 2.4vmin; }
 }
 @keyframes fontDecrease {
     to{ font-size: 13px;}
