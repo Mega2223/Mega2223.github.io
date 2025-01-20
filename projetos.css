@@ -157,3 +157,7 @@ img{
     grid-row-start: 2;
     grid-column-start: 2;
 }
+
+#lowerright .title2{
+    color: mediumseagreen;
+}
