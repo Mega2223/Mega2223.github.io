@@ -97,7 +97,7 @@ img{
     display: inline-flex;
 
     align-content: center;
-    border: lightgray 2px solid;
+    border: lightgray .4vh solid;
     width: 35vw;
     height: 35vw;
 }
@@ -106,8 +106,8 @@ img{
     display: inline-grid;
     align-content: center;
     text-align: center;
-    border: lightgray 2px solid;
-    margin: 2px 2px 2px 2px;
+    border: lightgray .4vh solid;
+    margin: .4vh .4vh .4vh .4vh;
     /*width: 39vw;*/
     /*height: 39vw;*/
 }
