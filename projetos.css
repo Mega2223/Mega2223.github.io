@@ -1,3 +1,8 @@
+:root {
+    --background: #06060600;
+    --background2: #12121223;
+}
+
 @font-face {
     font-family: "Public Pixel";
     src: url("./fonts/public-pixel-font/PublicPixel.ttf");
@@ -169,12 +174,13 @@ img{
 #background{
     font-family: Consolas, monospace;
     position: fixed;
+    /*position: absolute;*/
     top: 0; left: 0; right: 0; bottom:0;
     margin: 0; border: none;
     content: " ";
-    z-index: -1999;
+    z-index: 1999;
     /*background: linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));*/
     background: repeating-linear-gradient(
-        transparent 0px, transparent 2px, #121212 2.001px, #121212 4px, #060606 4.001px
+        var(--background) 0px, var(--background) 2px, var(--background2) 2.001px, var(--background2) 4px, var(--background) 4.001px
     );
 }
