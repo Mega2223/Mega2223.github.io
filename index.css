@@ -33,13 +33,13 @@
 
 @keyframes page-fadeout {
     from{}
-    65%{
-        background-color: black;
+    50%{
+        background-color: #060606FF;
         opacity: 100%;
     }
     to{
         opacity: 0;
-        background-color: black;
+        background-color: #060606FF;
     }
 }
 
