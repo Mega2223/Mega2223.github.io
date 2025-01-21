@@ -204,6 +204,7 @@ img{
     z-index: 1000;
     animation: crt-anim 12s infinite;
     animation-timing-function: linear;
+    pointer-events: none;
 }
 
 @keyframes crt-anim {
