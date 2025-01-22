@@ -256,11 +256,19 @@ img{
     }
     to{
         opacity: 0;
-        background-color: blue;
+        /*background-color: blue;*/
     }
 }
 
 @keyframes disappearLast {
     from{opacity: 100%}
+    50% {opacity: 80%}
     to{opacity: 0%;}
+}
+
+
+@keyframes background-fade {
+    from{background-color: #060606}
+    60% {background-color: #060606}
+    to{background-color: blue}
 }

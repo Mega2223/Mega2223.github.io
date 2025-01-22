@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="upper">
-    <p class="title">PROJETOS</p>
+    <p class="title" id = "title">PROJETOS</p>
 </div>
 <div id = "table">
     <div id="upperleft" class="subdiv">
@@ -20,7 +20,7 @@
                     a AguaEngine3D é o meu maior projeto solo, têm um framework repleto de utilidades para
                     a programação 3D e diversas funções de geração procedural.
                 </p>
-                <p class = "redirect" onclick="window.location.replace('https://github.com/Mega2223/AguaEngine3D/')">
+                <p class = "redirect" onclick="window.location.href=('https://github.com/Mega2223/AguaEngine3D/')">
                     Leia mais sobre a engine aqui!
                 </p>
             </div>
@@ -35,7 +35,7 @@
                     Ferramenta de visualização do futebol de robôs que usamos na Neon. Minha principal contribuição
                     foi a visualização de campo com OpenGL, mas eu também participei na elaboração da interface.
                 </p>
-                <p class = "redirect" onclick="window.location.replace('https://github.com/project-neon/NeonFCgui')">
+                <p class = "redirect" onclick="window.location.href=('https://github.com/project-neon/NeonFCgui')">
                     Repositório do NeonFCGui!
                 </p>
             </div>
@@ -49,7 +49,7 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere egestas turpis sed ornare. Praesent in fermentum purus. Ut dictum sagittis ex a vestibulum.
                 </p>
-                <p class = "redirect" onclick="window.location.replace('https://github.com/Mega2223/Readify')">
+                <p class = "redirect" onclick="window.location.href='https://github.com/Mega2223/Readify' ">
                     Repositório do Readify!
                 </p>
             </div>
@@ -63,7 +63,7 @@
                 <p> Dentro da Project Neon eu faço parte da divisão de software da tribo de autônomos multi-robóticos.
                     Eu trabalho majoritariamente na divisão do VSSS, que é uma modalidade de futebol autônomo de robôs de pequeno porte.
                 </p>
-                <p class = "redirect" onclick="window.location.replace('https://github.com/project-neon/NeonFC')">
+                <p class = "redirect" onclick="window.location.href = 'https://github.com/project-neon/NeonFC' ">
                     Repositório do NeonFC!
                 </p>
             </div>
@@ -74,8 +74,15 @@
 
 <div id = "buttons">
     <div id = "return" onclick="
-     document.body.style.animation = 'disappearFirst 4s forwards'
-     setTimeout(function (){ window.location.replace('./index') },4000)
+     document.body.style.animation = 'background-fade 5s forwards'
+     document.getElementById('table').style.animation = 'disappearFirst 3s forwards'
+     document.getElementById('title').style.animation = 'disappearFirst 3s forwards'
+     document.getElementById('background').style.animation = 'disappearFirst 3s forwards'
+     // document.getElementById('crt').style.animation = 'disappearFirst 4s forwards'
+
+     document.getElementById('return').style.animation = 'disappearLast 4s forwards'
+     document.getElementById('return').style.color = 'red'
+     setTimeout(function (){ window.location.href=('./') },5000)
 ">
         <p id = "return-text" >Voltar</p>
     </div>
@@ -84,7 +91,9 @@
     </div>
 </div>
 
-<div id = "background"></div>
-<div id = "crt"></div>
+<div id = "background">
+    <div id = "crt"></div>
+</div>
+
 </body>
 </html>
