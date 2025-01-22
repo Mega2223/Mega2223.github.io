@@ -211,3 +211,56 @@ img{
     from{top: -24vh;}
     to{top: 112vh;}
 }
+
+#buttons{
+    font-size: 4vh;
+    display: grid;
+}
+
+#buttons p:hover{
+    color: red;
+    user-select: none;
+}
+
+#return{
+    visibility: hidden;
+    height: 20vh;
+    text-align: left;
+}
+
+#return:after{
+    content: ">⠀Retornar⠀";
+    visibility: hidden;
+    animation: ret-blink infinite .9s;
+}
+
+#return:hover{
+    color: red
+}
+
+@keyframes ret-blink {
+    from{
+        content: ">⠀Retornar⠀";
+        visibility: hidden;
+    }
+    50%{
+        content: ">⠀Retornar_";
+        visibility: visible;
+    }
+}
+
+@keyframes disappearFirst {
+    from{opacity: 100%}
+    50%{
+        background-color: #060606;
+    }
+    to{
+        opacity: 0;
+        background-color: blue;
+    }
+}
+
+@keyframes disappearLast {
+    from{opacity: 100%}
+    to{opacity: 0%;}
+}
