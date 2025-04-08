@@ -177,6 +177,7 @@ body a:hover{
 
 #pages p{
     animation: blink 2s infinite;
+    line-height: 0.6vh;
 }
 
 #pages{
@@ -228,3 +229,13 @@ body a:hover{
     color: lightblue;
 }
 
+#repos{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#repos img {
+    width: 5vh;
+    border: dotted transparent .7vw;
+}
