@@ -229,6 +229,10 @@ body a:hover{
     color: lightblue;
 }
 
+a img:hover{
+    width: 100%;
+}
+
 #repos{
     display: flex;
     justify-content: center;
