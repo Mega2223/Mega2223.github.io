@@ -4,7 +4,7 @@
 
 Disponível em https://mega2223.github.io/
 
-Tudo aqui está sob a licença do projeto salvo indicação ao contrário
+Todo o conteúdo neste repositório, e por extensão todo o conteúdo do site, está sob a licença do projeto salvo a indicação ao contrário.
 
 ## Créditos
 
