@@ -1,4 +1,12 @@
-# Oi   
+%- style = default.css
+%- title = CAVALO
+%- show_at_index = true
+
+%- description = Só pra saber se o BlogInterpreter tá funcionando corretamente :)
+%- date = 2025-05-22
+%- authors = Júlio César
+
+# Olá
 
 ## Oi Oi   
 
