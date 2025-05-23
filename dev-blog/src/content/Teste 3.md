@@ -1,12 +1,13 @@
-%- style = default.css
+%- style = foi mal.css
 %- title = Foi Mal
 %- show_at_index = true
 
-%- description = Testando coisas 
-%- date = 2025-05-22
+%- description = Eu te contei, mas não saiu nada
+%- date = 2025-05-23
 %- authors = Júlio César
+%- tags =teste,testes
 
-Resolver tudo que posso
+resolver tudo que posso
 passo a resolver tudo que é fácil
 não tem nada tão difícil quanto não ter problema nenhum
 não ter problema nenhum

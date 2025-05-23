@@ -14,8 +14,6 @@ sabia que um mais um é igual a dois?
 
 :3   
 
-
-
 De acordo com todas as leis da aviação, não há como uma abelha voar, suas asas são muito pequenas para tirar seu pequeno corpo do chão.
 
 Amarelo preto, amarelo preto, amarelo pr
