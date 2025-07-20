@@ -1,0 +1,23 @@
+h1,h2,p{
+    font-family: "Consolas", serif;
+    color: white;
+}
+
+#background{
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -100;
+}
+
+#background img{
+    height: auto;
+    width: 100%;
+}
+
+body {
+    background-color: black
+}
+
+.thumbnail{
+    height: 80px;
+}
