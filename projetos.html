@@ -2,99 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projetos >-></title>
+    <title>Projetos</title>
     <link rel="stylesheet" href="projetos.css">
-<!--    <script src="./opengl/projetos-background.js" defer></script>-->
 </head>
 <body>
-<div class="upper">
-    <p class="title" id = "title">PROJETOS</p>
-</div>
-<div id = "table">
-    <div id="upperleft" class="subdiv">
-        <div class="display-outer">
-            <div class="display">
-                <img src="https://github.com/Mega2223/Mega2223.github.io/raw/main/media/WorldGenDemo.gif?raw=true">
-                <p class="title2">AguaEngine3D</p>
-                <p> Desde janeiro de 2023 eu venho trabalhando em uma engine 3d baseada em Java e OpenGL,
-                    a AguaEngine3D é o meu maior projeto solo, têm um framework repleto de utilidades para
-                    a programação 3D e diversas funções de geração procedural.
-                </p>
-                <p class = "redirect" onclick="window.location.href=('https://github.com/Mega2223/AguaEngine3D/')">
-                    Leia mais sobre a engine aqui!
-                </p>
+<div class = "border">
+<!-- Div mais externa, pra controlar a borda   -->
+    <div style="position: relative "> <!-- Titulo e subtitulo -->
+        <h1 class="title"> Meus Projetos </h1>
+        <p class="subtitle">Uma lista dos projetos mais relevantes que eu fiz ou colaborei.</p>
+    </div>
+    <div style="position: relative">
+<!-- Projetos -->
+        <div class = "project_session">
+<!--            AguaEngine3D, imagem do lado direito, foto lado esquerdo-->
+            <div class="right">
+                <img class="demo_img" src="https://github.com/Mega2223/Mega2223.github.io/raw/main/media/WorldGenDemo.gif?raw=true">
+                <!--                Imagem da Engine -->
+<!--                Eu acho que a essa altura faz sentido ter mair que uma imagem para a AE3D-->
+            </div>
+            <div class="left">
+<!--                Texto da Engine -->
+                <div class="project_info border2">
+                    <h2 style="color:blue">AguaEngine3D</h2>
+                    <p>
+                        Desde janeiro de 2023 eu venho trabalhando em uma engine 3d baseada em Java e OpenGL,
+                        a AguaEngine3D é o meu maior projeto solo, têm um framework repleto de utilidades para
+                        a programação 3D, funções de geração de relevo procedural, geração procedural de construções,
+                        sombreamento dinâmico, atualmente estou trabalhando em um módulo de simulação de física de corpos rígidos.
+                    </p>
+                    <p class = "redirect" onclick="window.location.href=('https://github.com/Mega2223/AguaEngine3D/')">
+                        Saiba mais mais sobre a engine aqui!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-    <div id="upperright" class="subdiv">
-        <div class="display-outer">
-            <div class="display">
-                <img src="./media/Robos2.gif">
-                <p class="title2">NeonFCGui</p>
-                <p>
-                    Ferramenta de visualização do futebol de robôs que usamos na Neon. Minha principal contribuição
-                    foi a visualização de campo com OpenGL, mas eu também participei na elaboração da interface.
-                </p>
-                <p class = "redirect" onclick="window.location.href=('https://github.com/project-neon/NeonFCgui')">
-                    Repositório do NeonFCGui!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="lowerleft" class="subdiv">
-        <div class="display-outer">
-            <div class="display">
-                <img src="./media/GMOD.jpg">
-                <p class="title2">Readify</p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla posuere egestas turpis sed ornare. Praesent in fermentum purus. Ut dictum sagittis ex a vestibulum.
-                </p>
-                <p class = "redirect" onclick="window.location.href='https://github.com/Mega2223/Readify' ">
-                    Repositório do Readify!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="lowerright" class="subdiv">
-        <div class="display-outer">
-            <div class="display">
-                <img src="./media/GMOD.jpg">
-                <p class="title2">NeonFC</p>
-                <p> Dentro da Project Neon eu faço parte da divisão de software da tribo de autônomos multi-robóticos.
-                    Eu trabalho majoritariamente na divisão do VSSS, que é uma modalidade de futebol autônomo de robôs de pequeno porte.
-                </p>
-                <p class = "redirect" onclick="window.location.href = 'https://github.com/project-neon/NeonFC' ">
-                    Repositório do NeonFC!
-                </p>
-            </div>
-        </div>
-    </div>
-
 </div>
-
-<div id = "buttons">
-    <div id = "return" onclick="
-     document.body.style.animation = 'background-fade 5s forwards'
-     document.getElementById('table').style.animation = 'disappearFirst 3s forwards'
-     document.getElementById('title').style.animation = 'disappearFirst 3s forwards'
-     document.getElementById('background').style.animation = 'disappearFirst 3s forwards'
-     // document.getElementById('crt').style.animation = 'disappearFirst 4s forwards'
-
-     document.getElementById('return').style.animation = 'disappearLast 4s forwards'
-     document.getElementById('return').style.color = 'red'
-     setTimeout(function (){ window.location.href=('./') },5000)
-">
-        <p id = "return-text" >Voltar</p>
-    </div>
-
-</div>
-<div id = "icons">
-
-</div>
-
-<div id = "background">
-    <div id = "crt"></div>
-</div>
-
 </body>
 </html>
