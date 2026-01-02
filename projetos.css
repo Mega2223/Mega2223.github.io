@@ -56,9 +56,10 @@ p{
 }
 
 .title{
-    font-size: 5vw;
+    font-size: 4.5vw;
     font-family: "Modeseven", ui-monospace;
-    line-height: 0;
+    /*line-height: 0;*/
+    /*background-color: whitesmoke;*/
 }
 
 .subtitle{
@@ -66,7 +67,10 @@ p{
 }
 
 .border{
-    border: #050505 10vh solid;
+    border-left: transparent 10vh solid;
+    border-right: transparent 10vh solid;
+
+    /*background-color: lightgray;*/
     /*top: 5vh; left: 5vw; right: 5vw;*/
 }
 
