@@ -39,12 +39,16 @@ body{
 }
 
 .border2 p {
-    border: transparent 1.5vw solid;
-    border-bottom: 2.5vw;
+    border-left: transparent 1.5vw solid;
+    border-right: transparent 1.5vw solid;
+    /*border-bottom: 0px;*/
+    /*background-color: purple;*/
+    text-align: center;
+    align-content: center;
 }
 
 h2{
-    font-family: "Perfect Dos", "Times New Roman", serif;
+    font-family: "Perfect Dos", "Times New Roman", "Comic Sans MS", serif;
 }
 
 p{
