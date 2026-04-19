@@ -6,7 +6,7 @@
 %- date = 2026-04-18
 %- authors = Júlio César
 %- tags = teste,testes
-%- thumbnail = /dev-blog/src/media/FOI MAL.png
+%- 4 = /dev-blog/src/media/FOI MAL.png
 %- color = 0,255,0:0,0,255
 
 Isso é um **teste do bolder grrr**
