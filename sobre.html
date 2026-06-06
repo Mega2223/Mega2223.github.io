@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre esse site.</title>
+  <link rel="stylesheet" href="sobre.css">
+  <script src = "./util/render.js" defer></script>
+  <script src = "./util/vmath.js" defer></script>
+  
+  <script id = "fragment-shader" type="glsl">
+    precision mediump float;
+
+    varying vec4 shaderColor;
+    varying vec4 fragmentPos;
+    void main() {
+        gl_FragColor = shaderColor;
+        gl_FragColor.a -= 0.01 * fragmentPos.z;
+    }
+  </script>
+  <script id = "vertex-shader" type="glsl">
+    attribute vec4 vertexPosition;
+    attribute vec3 vertexColor;
+    attribute float aspectRatio;
+
+    uniform mat4 projection;
+    uniform vec4 location;
+    varying vec4 shaderColor;
+    varying vec4 fragmentPos;
+
+    void main() {
+        gl_Position.w = 1.0;
+        gl_Position = (location + vertexPosition) * projection;
+        gl_Position.y *= 1.0;
+        shaderColor = vec4(1,1,1,1);
+        fragmentPos = location + vertexPosition;
+    }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=0.1"></head>
+
+<body>
+	<h1>mega2223.net.br</h1>
+	<p>Meu site-portifólio para eu apresentar meus projetos.</p>
+	<p>Todo o código fonte está sob a licença <a href="LICENSE">GPL V3</a></p>
+	<p>Os ícones da página principal foram feito pelo <a href="https://www.instagram.com/arturosarts/">Arturo Dobles</a>, estes ícones, assim como as demais imagens do site e do blog,
+		estão reservados sob a licença <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CreativeCommons Attribution-NonCommercial-ShareAlike 4.0 International</a>
+	</p>
+</body>
