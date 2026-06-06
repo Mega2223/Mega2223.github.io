@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: "Modern Dos";
+    src: url("./fonts/modern-dos-font/ModernDOS8x16.ttf");
+}
+
+p, h1{
+	font-family: 'Modern Dos';
+	color: white;
+}
+
+body {
+	background-color: black;
+}
