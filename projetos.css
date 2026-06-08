@@ -4,6 +4,11 @@
     src: url("./fonts/modern-dos-font/ModernDOS8x16.ttf");
 }
 
+@font-face {
+    font-family: "w95fa";
+    src: url("./fonts/w95fa/W95F.otf");
+}
+
 body {
 	color: white;
 	background-color: rgba(0, 128, 128, .9);
@@ -16,7 +21,7 @@ p, h1{
 }
 
 #selector{
-	background-color: rgba(255, 0, 0, 0.1);
+	background-color: rgba(255, 0, 0, 0);
 	position: absolute;
 	top: 7vh;
 	bottom: 7vh;
@@ -24,12 +29,19 @@ p, h1{
 	right: 75vw;
 }
 #projects{
-	background-color: rgba(0, 128, 0, 0.1);
+	background-color: #c1c1c1;
 	position: absolute;
 	top: 7vh;
 	bottom: 7vh;
 	left: 30vw;
 	right: 10vh;
+}
+#projects p, #projects h1 {
+	font-family: 'w95fa','consolas';
+}
+
+#programspace p, #programspace h1 {
+	color: black;
 }
 
 .subcon{
@@ -37,6 +49,33 @@ p, h1{
 	visibility:hidden;
 }
 
+.selector-entry {
+	-webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .selected p{
 	color: blue;
+}
+
+#titlebar{
+	background-color: #7d8281;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 4.5vh;
+}
+
+#programspace{
+	position: absolute;
+	top: 4.5vh;
+	bottom: 0;
+	width: 100%;
+}
+
+iframe{
+	height: 100%;
+	width: 100%;
 }

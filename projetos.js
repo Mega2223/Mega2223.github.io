@@ -1,13 +1,30 @@
 
 console.log('oi')
 
+const projs = [
+	'AguaEngine3D', 'NeonFC', 'SimpleFileTransferer', 'NeveAnalytics', 'Readify'
+]
+
 const pages = {
-	'AguaEngine3D': document.getElementById('a'),
-	'NeonFC': document.getElementById('b'),
-	'SimpleFileTransferer': document.getElementById('c'),
-	'NeveAnalytics': document.getElementById('d'),
-	'Readify': document.getElementById('e')
+	// 'AguaEngine3D': document.getElementById('AguaEngine3D'),
+	// 'NeonFC': document.getElementById('NeonFC'),
+	// 'SimpleFileTransferer': document.getElementById('SimpleFileTransferer'),
+	// 'NeveAnalytics': document.getElementById('NeveAnalytics'),
+	// 'Readify': document.getElementById('Readify')
 };
+
+const programSpace = document.getElementById('programspace');
+
+for (var index in projs) {
+	const proj = projs[index];
+	const elem = document.createElement('iframe');
+	elem.id = proj;
+	elem.classList.add("subcon");
+	elem.setAttribute("src", `./projetos/${proj}.html`);
+	pages[proj] = elem;
+	programSpace.appendChild(elem);
+}
+
 const selectors = {};
 
 var current = null;
@@ -23,11 +40,10 @@ function setCurrentPage(index) {
 		currentSelector.classList.remove("selected");
 	}
 	current = pages[index];
-	console.debug(pages);
 	current.style.visibility = 'visible';
 	currentSelector = selectors[index];
 	currentSelector.classList.add("selected");
-	console.debug('D=',selectors[index]);
+	document.getElementById('titletext').innerHTML = `${index}.exe`;
 }
 
 setCurrentPage('a');
@@ -35,11 +51,11 @@ setCurrentPage('a');
 const selector = document.getElementById('selector')
 
 for (const [key, value] of Object.entries(pages)) {
-	console.log(key, '= ->', value);
+	// console.log(key, '= ->', value);
 	const div = document.createElement('div');
 	const div_id = `${key}-sel`
 	div.innerHTML = `
-		<div id=${div_id}>
+		<div id=${div_id} class=selector-entry>
 			<p onclick="setCurrentPage('${key}')">\> ${key}</p>
 		</div>
 	`;
