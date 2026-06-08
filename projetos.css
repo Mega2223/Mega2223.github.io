@@ -1,5 +1,22 @@
+
+@font-face {
+    font-family: "Modern Dos";
+    src: url("./fonts/modern-dos-font/ModernDOS8x16.ttf");
+}
+
+body {
+	color: white;
+	background-color: rgba(0, 128, 128, .9);
+}
+
+p, h1{
+	font-family: 'Modern Dos';
+	color: white;
+	line-height: 0;
+}
+
 #selector{
-	background-color: red;
+	background-color: rgba(255, 0, 0, 0.1);
 	position: absolute;
 	top: 7vh;
 	bottom: 7vh;
@@ -7,7 +24,7 @@
 	right: 75vw;
 }
 #projects{
-	background-color: green;
+	background-color: rgba(0, 128, 0, 0.1);
 	position: absolute;
 	top: 7vh;
 	bottom: 7vh;
@@ -15,16 +32,11 @@
 	right: 10vh;
 }
 
-#a {
-	visibility:hidden;
-}
-#b {
-	visibility:hidden;
-}
-#c {
+.subcon{
+	position: absolute;
 	visibility:hidden;
 }
 
-.subcon{
-	position: absolute;
+.selected p{
+	color: blue;
 }
