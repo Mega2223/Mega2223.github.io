@@ -30,14 +30,21 @@ p, h1{
 }
 #projects{
 	background-color: #c1c1c1;
+	border-top: #dddddd 2px solid;
+	border-left: #dddddd 2px solid;
+	border-bottom: #000000 2px solid;
+	border-right: #000000 2px solid;
+	/* outline: #c3ccd3 2px solid; */
 	position: absolute;
 	top: 7vh;
 	bottom: 7vh;
 	left: 30vw;
 	right: 10vh;
 }
+
 #projects p, #projects h1 {
-	font-family: 'w95fa','consolas';
+	font-family: 'Modern DOS','w95fa','consolas';
+	color: #beb7be;
 }
 
 #programspace p, #programspace h1 {
@@ -61,11 +68,13 @@ p, h1{
 
 #titlebar{
 	background-color: #7d8281;
-	width: 100%;
+	width: calc( 100% - 4px);
 	top: 0;
 	left: 0;
 	position: absolute;
 	height: 4.5vh;
+	border: #c1c1c1 2px solid;
+	
 }
 
 #programspace{
@@ -76,6 +85,7 @@ p, h1{
 }
 
 iframe{
-	height: 100%;
+	height: calc(100% - 4px);
 	width: 100%;
+	border: 0;
 }

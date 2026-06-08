@@ -43,10 +43,8 @@ function setCurrentPage(index) {
 	current.style.visibility = 'visible';
 	currentSelector = selectors[index];
 	currentSelector.classList.add("selected");
-	document.getElementById('titletext').innerHTML = `${index}.exe`;
+	document.getElementById('titletext').innerHTML = `\<b\>${index}.exe\<b\\\>`;
 }
-
-setCurrentPage('a');
 
 const selector = document.getElementById('selector')
 
@@ -56,7 +54,7 @@ for (const [key, value] of Object.entries(pages)) {
 	const div_id = `${key}-sel`
 	div.innerHTML = `
 		<div id=${div_id} class=selector-entry>
-			<p onclick="setCurrentPage('${key}')">\> ${key}</p>
+			<p onclick="setCurrentPage('${key}')">\>${key}</p>
 		</div>
 	`;
 	selector.appendChild(div);
