@@ -8,4 +8,4 @@ Todo o conteúdo neste repositório, e por extensão todo o conteúdo do site, e
 
 ## Créditos
 
-- [Arturo Dobles](https://www.instagram.com/arturosarts/) Fez os ícones da página principal, melhor artista de Ribeirão Preto.
+- [Arturo Dobles](https://www.instagram.com/design_carbon_fiber) Fez os ícones da página principal, melhor artista de Ribeirão Preto.
