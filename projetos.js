@@ -2,18 +2,13 @@
 console.log('oi')
 
 const projs = [
-	'AguaEngine3D', 'NeonFC', 'SimpleFileTransferer', 'NeveAnalytics', 'Readify'
+	'AguaEngine3D', 'NeonFC', 'SimpleFileTransferer', 'NeveAnalytics', 'Readify', 'BlogInterpreter', 'Telecom'
 ]
 
-const pages = {
-	// 'AguaEngine3D': document.getElementById('AguaEngine3D'),
-	// 'NeonFC': document.getElementById('NeonFC'),
-	// 'SimpleFileTransferer': document.getElementById('SimpleFileTransferer'),
-	// 'NeveAnalytics': document.getElementById('NeveAnalytics'),
-	// 'Readify': document.getElementById('Readify')
-};
+const pages = {};
 
 const programSpace = document.getElementById('programspace');
+const projectWindowElement = document.getElementById('projects');
 
 for (var index in projs) {
 	const proj = projs[index];
@@ -44,21 +39,28 @@ function setCurrentPage(index) {
 	currentSelector = selectors[index];
 	currentSelector.classList.add("selected");
 	document.getElementById('titletext').innerHTML = `\<b\>${index}.exe\<b\\\>`;
+
+	projectWindowElement.style.animation = 'none';
+	projectWindowElement.offsetHeight;
+	projectWindowElement.style.animation = 'projs-winopen 1.5s forwards';
 }
 
 const selector = document.getElementById('selector')
 
+var i = 1;
 for (const [key, value] of Object.entries(pages)) {
-	// console.log(key, '= ->', value);
 	const div = document.createElement('div');
 	const div_id = `${key}-sel`
 	div.innerHTML = `
-		<div id=${div_id} class=selector-entry>
-			<p onclick="setCurrentPage('${key}')">\>${key}</p>
+		<div id=${div_id} onclick="setCurrentPage('${key}')" class=selector-entry class = "selector-entry"
+		style = "grid-row: ${i % 3}; grid-column: ${Math.floor(i / 3)};">
+			<img src = "projetos\\${key}.png" width = 50 height = 50 alt = "icone ${key}">
+			<p>${key}.exe</p>
 		</div>
 	`;
 	selector.appendChild(div);
 	selectors[key] = div;
+	i++;
 }
 
 
