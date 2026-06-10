@@ -52,7 +52,7 @@ var i = 1;
 for (const [key, value] of Object.entries(pages)) {
 	const div = document.createElement('div');
 	const div_id = `${key}-sel`;
-	const name_abbrev = key.matchAll(/[A-Za-z1-9]{0,10}[^A-Z1-9]*/g).toArray().join('<br>');
+	const name_abbrev = key.matchAll(/[A-Za-z1-9]{0,6}[^A-Z1-9]*/g).toArray().join('<br>');
 	//key.matchAll(/[A-Z1-9a-z]*?[a-z]{0,7}/g).toArray().join('<br>');
 	// key.matchAll(/.{9}/g).toArray().join('<br>');
 

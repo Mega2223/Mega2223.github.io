@@ -30,7 +30,8 @@ p, h1{
 	font-family: 'Modern Dos';
 	color: white;
 	/* line-height: 0; */
-	top: -10px;
+	transform: translate(0,-10px);
+	/* top: -10px; */
 }
 
 #selector{
