@@ -29,7 +29,8 @@ body {
 p, h1{
 	font-family: 'Modern Dos';
 	color: white;
-	line-height: 0;
+	/* line-height: 0; */
+	top: -10px;
 }
 
 #selector{
