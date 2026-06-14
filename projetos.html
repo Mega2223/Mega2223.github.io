@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <title>Projetos o-o</title>
     <link rel="stylesheet" href="projetos.css">
-<!--    <script src="./opengl/projetos-background.js" defer></script>-->
 	<script src="./projetos.js" defer></script>
+	<script id = "vertex-shader" src = "./opengl/projetosbackground_vertex.glsl" defer type="glsl"></script>
+	<script id = "fragment-shader" src = "./opengl/projetosbackground_fragment.glsl" defer type="glsl"></script>
+	
+	<script src = "./util/render.js" defer></script>
+  	<script src = "./util/vmath.js" defer></script>
+	
+	<script src = "./opengl/opengl.css"></script>
+	<script src="./opengl/projetosbackground.js" defer></script>
 </head>
 <body>
 	<div id = "selector">
@@ -24,5 +31,8 @@
 		<!-- Faz uma janelinham, tipo AguaEngine.exe -->
 		<!-- Also lembra que futuramente a janela de pesquisa vai ter que funcionar de forma similar -->
 	</div>
+	<canvas id = "wallpaper">
+		
+	</canvas>
 </body>
 </html>

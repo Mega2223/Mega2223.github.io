@@ -53,19 +53,10 @@ for (const [key, value] of Object.entries(pages)) {
 	const div = document.createElement('div');
 	const div_id = `${key}-sel`;
 	const name_abbrev = key.matchAll(/[A-Za-z1-9]{0,6}[^A-Z1-9]*/g).toArray().join('<br>');
-	//key.matchAll(/[A-Z1-9a-z]*?[a-z]{0,7}/g).toArray().join('<br>');
-	// key.matchAll(/.{9}/g).toArray().join('<br>');
-
-	// var name_abbrev = '';
-	// key.matchAll(/[1-9A-Z]/g).forEach(s => name_abbrev += s);
-	// if (name_abbrev.length < 3) {
-	// 	key.matchAll(/[\w1-9]/g).forEach(s => {
-	// 		if (name_abbrev.length < 3) name_abbrev += s;
-	// 	});
-	// }
+	
 	div.innerHTML = `
 		<div id=${div_id} onclick="setCurrentPage('${key}')" class=selector-entry class = "selector-entry"
-		style = "grid-row: ${i % 3}; grid-column: ${Math.floor(i / 3)};">
+		style = "grid-column: ${i % 3 + 1}; grid-row: ${Math.floor(i / 3) + 1};">
 			<img src = "projetos\\${key}.png" width = 50 height = 50 alt = "icone ${key}">
 			<p>${name_abbrev}</p>
 		</div>
