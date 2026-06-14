@@ -27,11 +27,17 @@ precision mediump float;
 varying vec4 pos;
 void main() {
 	// gl_FragColor = vec4(0,128.0/255.0,128.0/255.0,1);
-	
-	if( sin(pos.y*8.0) < mod((pos.x+1.0)*4.0,1.0) * 2.0 - 1.0 ){
-		gl_FragColor.b = 0.25;
-		if( 1.0 < mod((pos.x+1.0)*4.0,2.0)) gl_FragColor.r = 1.0;
+	float k = 10.0;
+	if( 1.0 < mod((pos.x+1.0)*k,2.0)){
+		if( sin(pos.y*8.0) < mod((pos.x+1.0)*k,1.0) * 2.0 - 1.0 ){
+			gl_FragColor.b = 0.25;
+		}
+	} else {
+		if( sin(-pos.y*8.0 + radians(180.0)) > mod((pos.x+1.0)*k,1.0) * 2.0 - 1.0 ){
+			gl_FragColor.r = 0.25;
+		}
 	}
+	
 	// gl_FragColor.r = mod((pos.x+1.0)*2.0,1.0);
 	// gl_FragColor.g = .5+.5*sin(pos.y*8.0);
 	gl_FragColor.a = 1.0;
