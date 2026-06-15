@@ -9,6 +9,16 @@
     src: url("./fonts/ms-sans-serif/ms-sans-serif.otf");
 }
 
+@font-face {
+    font-family: "SansSerif8p";
+    src: url("./fonts/MS Sans Serif 8pt/MS Sans Serif 8pt.ttf");
+}
+
+@font-face {
+    font-family: "SansSerif8pBold";
+    src: url("./fonts/MS Sans Serif 8pt/MS Sans Serif 8pt bold.ttf");
+}
+
 @keyframes winopen {
     from{
 		opacity: 0;
@@ -118,6 +128,7 @@ p, h1{
 
 #titlebar p {
 	color: white;
+	font-family: SansSerif8pBold;
 }
 
 #programspace{
@@ -142,8 +153,8 @@ iframe{
 
 .selector-entry p{
 	font-size: 12pt;
-	color: #FFFFFF;
-	font-family: microsoft-sans-serif, sans-serif;
+	color: #000000FF;
+	font-family: SansSerif8p, microsoft-sans-serif, sans-serif;
 	font-smooth: never;
 	-webkit-font-smoothing : none;
 	font-synthesis-weight: none;
