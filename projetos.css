@@ -116,7 +116,7 @@ p, h1{
 
 #titlebar{
 	/* background-color: #7d8281; */
-	background-color: blue;
+	background: linear-gradient(90deg,rgba(9, 6, 124, 1) 0%, rgba(0, 0, 0, 1) 100%);
 	width: calc( 100% - 4px);
 	top: 0;
 	left: 0;
@@ -129,6 +129,7 @@ p, h1{
 #titlebar p {
 	color: white;
 	font-family: SansSerif8pBold;
+	font-size: 12px;
 }
 
 #programspace{
@@ -153,7 +154,7 @@ iframe{
 
 .selector-entry p{
 	font-size: 12pt;
-	color: #000000FF;
+	color: #FFFFFFFF;
 	font-family: SansSerif8p, microsoft-sans-serif, sans-serif;
 	font-smooth: never;
 	-webkit-font-smoothing : none;
