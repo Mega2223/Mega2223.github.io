@@ -6,6 +6,7 @@ const projs = [
 ]
 
 const pages = {};
+const icon_divs = {};
 
 const programSpace = document.getElementById('programspace');
 const projectWindowElement = document.getElementById('projects');

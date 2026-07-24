@@ -110,8 +110,11 @@ p, h1{
     user-select: none;
 }
 
-.selected p{
-	color: blue;
+
+.selected img, .selected p{
+	color: white;
+	background-color: #000066;
+	border: white 1px dotted;
 }
 
 #titlebar{
